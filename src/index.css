@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    img {
+      @apply cursor-pointer;
+    }
+
+    a{
+text-decoration: none;
+color: yellow
+    }
+  }
