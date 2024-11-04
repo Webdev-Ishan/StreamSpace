@@ -93,7 +93,7 @@ const signingoogle=()=>{
     </button>
 
     {/* <!--Forgot password link--> */}
-    <Link to={'/OTP'} href="#!">Forgot password?</Link>
+    <Link to={'/'} href="#!">Forgot password?</Link>
   </div>
 
   {/* <!--Register button--> */}

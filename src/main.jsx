@@ -9,7 +9,6 @@ import { Provider } from 'react-redux'
 import {store} from './Store/store'
 import Authentication from './Pages/Authentication/Authentication'
 import Signup from './Pages/Signup/Signup'
-import OTP from './Pages/OTP/OTP'
 import Aboutus from './Components/Aboutus/Aboutus'
 const router = createBrowserRouter([
 {
@@ -35,10 +34,7 @@ const router = createBrowserRouter([
   path:'/signup',
   element:<Signup/>
 },
-{
-  path:'/OTP',
-  element:<OTP/>
-},
+
 {
   path:'/Aboutus',
   element:<Aboutus/>
