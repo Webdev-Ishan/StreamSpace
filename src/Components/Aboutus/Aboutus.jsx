@@ -1,5 +1,5 @@
 import React from 'react'
-import streamspace from '../../assets/streamspace.png'
+import streamspace from '../../../public/assets/streamspace.png'
 
 
 function Aboutus() {

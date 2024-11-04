@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import { db,app } from '../../Firebase/webservices'; // Adjust the import path
 import { ref, set } from 'firebase/database';
-import { getAuth, createUserWithEmailAndPassword ,GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword ,GoogleAuthProvider, signInWithPopup ,getRedirectResult } from "firebase/auth";
 
 const provider= new GoogleAuthProvider();
 const auth = getAuth(app);
@@ -45,11 +45,11 @@ const [password,setpassword]=React.useState()
       // 2nd function
       const signingoogle=()=>{
 
-        signInWithPopup(auth,provider)
+        signInWithPopup(auth, provider)
         navigate('/')
-        alert('your account has been created')
+        alert('your have logged in properly')
+       
       }
-    
   return (
     <div >
       <section className="bg-gray-50 dark:bg-gray-900 p-2">
@@ -89,7 +89,7 @@ const [password,setpassword]=React.useState()
                   <button className="w-full max-w-xs p-2 text-blue-500 bg-white rounded-lg  hover:opacity-80 flex justify-center" onClick={signingoogle}>
                     <img className="w-8 h-8 border-2 mr-2  rounded-3xl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzgWME4JpAEuAS1jINodwrHzgO4t42uypLGQ&s" alt="" />
                     
-                    Sign in with Google</button>
+                    Sign up with Google</button>
                   
                   <button onClick={adduser}  type="submit" className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create an account</button>
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">

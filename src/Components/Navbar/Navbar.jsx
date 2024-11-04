@@ -1,12 +1,10 @@
 import React, { useState,useEffect } from 'react';
-import {useNavigate} from 'react-router-dom'
-import menu_icon from '../../assets/menu.png';
-import logo from '../../assets/download.png';
-import search_icon from '../../assets/search.png';
-import upload_icon from '../../assets/upload.png';
-import notification_icon from '../../assets/notification.png';
-import more_icon from '../../assets/more.png';
-import profile_icon from '../../assets/jack.png';
+import menu_icon from '../../../public/assets/menu.png';
+import search_icon from '../../../public/assets/search.png';
+import upload_icon from '../../../public/assets/upload.png';
+import notification_icon from '../../../public/assets/notification.png';
+import more_icon from '../../../public/assets/more.png';
+import profile_icon from '../../../public/assets/jack.png';
 import {togglesidebar} from '../../Features/SidebarFeature/sidebarslice'
 import {useDispatch} from 'react-redux'
 import {addkeyword} from '../../Features/Searchkeyword/searchslice'
@@ -36,7 +34,7 @@ useEffect(()=>{
 onAuthStateChanged(auth,(load)=>{
 if(load){
 
-setload('')
+setload('Logout')
 
 }
 
@@ -49,12 +47,7 @@ else {
 },[])
 
 
-const messsage=()=>{
-  if(load==''){
-    alert('you are already loggedin as a user.')
-  setload('Aboutus')
-  }
-}
+
 
   return (
     <div className='flex flex-col md:flex-row items-center p-3 justify-between  top-0 z-10 shadow-sm shadow-white drop-shadow-2xl'>
@@ -78,7 +71,7 @@ const messsage=()=>{
         <img className='w-7 mr-4 hover:w-9 ease-in-out duration-300' src={upload_icon} alt="Upload" />
         <img className='w-7 mr-4 hover:w-9 ease-in-out duration-300' src={notification_icon} alt="Notification" />
         <img className='w-7 mr-4 hover:w-9 ease-in-out duration-300' src={more_icon} alt="More" />
-      <Link to={`/${load}`} onClick={messsage} > <img className='w-8 rounded-2xl border-2 border-white hover:border-yellow-400 hover:w-9 ease-in-out duration-300' src={profile_icon} alt="Profile" /> </Link> 
+      <Link to={`/${load}`}  > <img className='w-8 rounded-2xl border-2 border-white hover:border-yellow-400 hover:w-9 ease-in-out duration-300' src={profile_icon} alt="Profile" /> </Link> 
       </div>
     </div>
   );

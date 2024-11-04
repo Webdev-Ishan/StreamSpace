@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
-import like from '../../assets/like.png'
+import like from '../../../public/assets/like.png'
 import {API_KEY} from '../../Data'
 import moment from 'moment';
 import { useSelector } from 'react-redux';

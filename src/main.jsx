@@ -10,6 +10,7 @@ import {store} from './Store/store'
 import Authentication from './Pages/Authentication/Authentication'
 import Signup from './Pages/Signup/Signup'
 import Aboutus from './Components/Aboutus/Aboutus'
+import Logout from './Components/Logout/Logout'
 const router = createBrowserRouter([
 {
   path:'/',
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
 {
   path:'/Aboutus',
   element:<Aboutus/>
+},
+{
+  path:'/logout',
+  element:<Logout/>
 }
 
   ]

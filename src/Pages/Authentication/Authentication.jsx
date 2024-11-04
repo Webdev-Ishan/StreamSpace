@@ -1,7 +1,7 @@
 import React from "react";
 import {Link ,useNavigate} from 'react-router-dom'
 import { app } from '../../Firebase/webservices';
-import { getAuth, signInWithEmailAndPassword ,signInWithRedirect ,GoogleAuthProvider} from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword ,signInWithPopup ,GoogleAuthProvider} from "firebase/auth";
 
 const provider= new GoogleAuthProvider();
 const auth = getAuth(app);
@@ -24,9 +24,10 @@ const signinuser=()=>{
 
 const signingoogle=()=>{
 
-  signInWithRedirect(auth, provider);
-  navigate('/');
-  alert('You have signed in properly')
+  signInWithPopup(auth, provider)
+  navigate('/')
+  alert('your have logged in properly')
+ 
 }
   return (
     <section className="h-full bg-gradient-to-r from-slate-300 to-slate-500">
